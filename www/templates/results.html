@@ -3,25 +3,6 @@
         <button class="button button-clear" ng-hide="!OMDB_RESULTS" ng-click="clearSearch()">Clear</button>
     </ion-nav-buttons>
     <ion-content class="padding">
-        <div class="list card" ng-hide="OMDB_RESULTS">
-            <div class="item item-avatar">
-                <h2>Shrenik Shah</h2>
-                <p>
-                    <a href="mailto:shrenic.shah@outlook.com" class="subdued"><i class="ion-email"></i></a>
-                    <a href="" class="subdued"></a>
-                </p>
-            </div>
-            <div class="item item-body">
-                <p><b>Service/Factory: </b></p>
-                <p>There is a single service that handles the connection to OMDB and the DOM. Uses promises ($q) to handle Asynchronous calls to API.</p>
-                <p><b>Controllers:</b></p>
-                <p>These are pretty straight forward and handle most of the logic. There is a Highcharts Config setup in the DetailsCtrl that works with highcharts-ng and the directive in the DOM. </p>
-                <p><b>App.js:</b></p>
-                <p>One parent route with child routes for individual sections etc. </p>
-                <p><b>Protractor.js:</b></p>
-                <p>For unit testing and e2e testing</p>
-            </div>
-        </div>
         <ion-list ng-hide="!OMDB_RESULTS">
             <a class="item item-thumbnail-left" ng-repeat="item in OMDB_RESULTS" href="#/app/details/{{item.imdbID}}">
                 <img ng-src="{{item.Poster}}">
